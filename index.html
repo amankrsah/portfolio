@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html class="no-js ss-preload" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Aman Kumar Sah - Portfolio</title>
+    <meta name="description" content="Portfolio of Aman Kumar Sah - Full Stack AI Engineer">
+    <meta name="author" content="Aman Kumar Sah">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        .intro-svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 4rem;
+        }
+        @media screen and (max-width: 800px) {
+            .intro-svg-container {
+                display: none;
+            }
+        }
+
+        /* Attractive Technical Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .skill-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-1);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+        .skill-category {
+            font-family: var(--font-2);
+            font-size: 2.2rem;
+            color: var(--color-1);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--color-text-dark);
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-family: var(--font-1);
+            letter-spacing: 0.5px;
+        }
+
+        /* Project Letter Placeholders */
+        .project-letter-placeholder {
+            width: var(--item-min-height);
+            height: var(--item-min-height);
+            background: linear-gradient(135deg, var(--color-gray-10) 0%, var(--color-gray-14) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10rem;
+            font-family: var(--font-2);
+            color: var(--color-1);
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- # preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+    <!-- # page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+
+        <div class="circles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- ## site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="header-mobile">
+                <span class="mobile-home-link"><a href="index.html">Aman.</a></span>
+                <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+
+            <div class="row wide main-nav-wrap">
+                <nav class="column lg-12 main-nav">
+                    <ul>
+                        <li><a href="index.html" class="home-link">Aman.</a></li>
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#works" class="smoothscroll">Works</a></li>
+                        <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header> <!-- end s-header -->
+
+        <!-- ## main content
+        ==================================================- -->
+        <main class="s-content">
+
+            <!-- ### intro
+            ================================================== -->
+            <section id="intro" class="s-intro target-section">
+
+                <div class="row intro-content wide row-y-center">
+
+                    <div class="column lg-6 md-12">
+                        <div class="text-pretitle with-line">
+                            Hello There
+                        </div>
+
+                        <h1 class="text-huge-title" style="font-size: 8.5rem;">
+                            I am Aman, <br>
+                            a FULL-STACK AI-ENGINEER<br> 
+                            based <br>
+                            in INDIA.
+                        </h1>
+                    </div>
+
+                    <!-- AI/Dev SVG Illustration Column -->
+                    <div class="column lg-6 md-12 intro-svg-container">
+                        <svg width="100%" height="auto" style="max-width: 400px;" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#eabe7c;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#23967f;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Outer dashed rotating circle -->
+                            <circle cx="250" cy="250" r="180" fill="none" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="15 15" opacity="0.6">
+                                <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="360 250 250" dur="30s" repeatCount="indefinite"/>
+                            </circle>
+                            <!-- Inner dashed rotating circle -->
+                            <circle cx="250" cy="250" r="120" fill="none" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="8 8" opacity="0.8">
+                                <animateTransform attributeName="transform" type="rotate" from="360 250 250" to="0 250 250" dur="20s" repeatCount="indefinite"/>
+                            </circle>
+                            <!-- Neural Network Hexagon -->
+                            <path d="M 250 130 L 350 190 L 350 310 L 250 370 L 150 310 L 150 190 Z" fill="none" stroke="#eabe7c" stroke-width="3" opacity="0.8"/>
+                            
+                            <!-- Connective lines from center to nodes -->
+                            <line x1="250" y1="250" x2="250" y2="130" stroke="#23967f" stroke-width="2"/>
+                            <line x1="250" y1="250" x2="350" y2="190" stroke="#23967f" stroke-width="2"/>
+                            <line x1="250" y1="250" x2="350" y2="310" stroke="#23967f" stroke-width="2"/>
+                            <line x1="250" y1="250" x2="250" y2="370" stroke="#23967f" stroke-width="2"/>
+                            <line x1="250" y1="250" x2="150" y2="310" stroke="#23967f" stroke-width="2"/>
+                            <line x1="250" y1="250" x2="150" y2="190" stroke="#23967f" stroke-width="2"/>
+
+                            <!-- Hexagon Nodes -->
+                            <circle cx="250" cy="130" r="10" fill="#eabe7c"/>
+                            <circle cx="350" cy="190" r="10" fill="#eabe7c"/>
+                            <circle cx="350" cy="310" r="10" fill="#eabe7c"/>
+                            <circle cx="250" cy="370" r="10" fill="#eabe7c"/>
+                            <circle cx="150" cy="310" r="10" fill="#eabe7c"/>
+                            <circle cx="150" cy="190" r="10" fill="#eabe7c"/>
+
+                            <!-- Pulsing Center AI Node -->
+                            <circle cx="250" cy="250" r="30" fill="url(#grad1)">
+                                 <animate attributeName="r" values="25; 35; 25" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="250" cy="250" r="10" fill="#fff"/>
+                        </svg>
+                    </div>
+
+                    <ul class="intro-social">
+                        <li><a href="https://www.linkedin.com/in/amankrsah108/">LinkedIn</a></li>
+                        <li><a href="https://github.com/amankrsah">GitHub</a></li>
+                        <li><a href="mailto:amankumarsah97555@gmail.com">Email</a></li>
+                    </ul>
+
+                </div> <!-- end intro content -->
+
+                <a href="#about" class="intro-scrolldown smoothscroll">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                </a>
+
+            </section> <!-- end s-intro -->
+
+
+            <!-- ### about
+            ================================================== -->
+            <section id="about" class="s-about target-section">
+                <div class="row about-info wide" data-animate-block>
+
+                    <div class="column lg-6 md-12 about-info__pic-block">
+                        <img src="images/about-photo.jpg" 
+                             srcset="images/about-photo.jpg 1x, images/about-photo.jpg 2x" alt="Aman Kumar Sah" class="about-info__pic" data-animate-el>
+                    </div>
+
+                    <div class="column lg-6 md-12">
+                        <div class="about-info__text" >
+                            <h2 class="text-pretitle with-line" data-animate-el>
+                                About
+                            </h2>
+                            <p class="attention-getter" data-animate-el style="color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); font-weight: 400;">
+                                Full Stack AI Engineer specializing in MERN and Python machine learning pipelines. Experienced in building scalable web applications and deploying AI models to production. <br><br>
+                                Qualified GATE 2026 and 2025. Strong technical background in Deep Learning, Computer Vision, and RESTful API engineering.<br><br>
+                                Architecting robust algorithms and optimizing AI systems is my favorite genre of work.
+                            </p>
+                            <a href="/files/Aman_Kr_Sah_Resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el download>Download CV</a>
+                        </div>
+                    </div>
+                </div> <!-- about-info -->
+
+
+                <div class="row about-expertise" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>Technical Skills</h2>
+
+                        <div class="skills-grid" data-animate-el>
+                            
+                            <!-- Skill Card 1 -->
+                            <div class="skill-card">
+                                <h3 class="skill-category">Languages</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">C/C++</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">HTML/CSS</span>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card 2 -->
+                            <div class="skill-card">
+                                <h3 class="skill-category">AI / ML</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">Scikit-learn</span>
+                                    <span class="skill-tag">Computer Vision</span>
+                                    <span class="skill-tag">OpenCV</span>
+                                    <span class="skill-tag">DeepFace</span>
+                                    <span class="skill-tag">Bias Mitigation</span>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card 3 -->
+                            <div class="skill-card">
+                                <h3 class="skill-category">Web & Backend</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">FastAPI</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                </div>
+                            </div>
+
+                            <!-- Skill Card 4 -->
+                            <div class="skill-card">
+                                <h3 class="skill-category">Developer Tools</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Linux / Ubuntu</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Postman</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div> <!-- end about-expertise -->
+
+
+                <div class="row about-timelines" data-animate-block>
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Experience
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">National Institute of Technology, Raipur</h4>
+                                    <h5 class="timeline__meta">Junior Research Fellow – Full Stack AI Engineer (MeitY Funded)</h5>
+                                    <p class="timeline__timeframe">October 2025 - Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Implemented adversarial debiasing on Vision Transformer architectures (EVA-02).<br> Engineered a genetic algorithm-driven optimization framework (Python, DEAP).<br> Architected a dual-factor biometric attendance monitoring system using FastAPI, React, and DeepFace.</p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">National Institute of Technology, Raipur</h4>
+                                    <h5 class="timeline__meta">Project Fellow – AI Engineer (NITI Aayog Funded)</h5>
+                                    <p class="timeline__timeframe">July 2025 - October 2025</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Developed core deep learning classifier for Smart AgroGuard (AI paddy disease detection), improving accuracy to 98.6%.<br> Designed RESTful APIs for serving ML predictions to mobile apps.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Fixing Dots</h4>
+                                    <h5 class="timeline__meta">MERN Stack Developer</h5>
+                                    <p class="timeline__timeframe">June 2024 - October 2024</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Developed Kearth Solutions company website and admin panel.<br>Engineered a heavy machinery rental platform, achieving a 92.5% reduction in authentication response time.</p>
+                                </div>
+                            </div>
+    
+                        </div> <!-- end timeline -->
+
+                    </div> <!-- end column -->
+
+                    <div class="column lg-6 tab-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Education
+                        </h2>
+
+                        <div class="timeline" data-animate-el>
+
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Columbia Institute of Engineering and Technology</h4>
+                                    <h5 class="timeline__meta">B.Tech in Computer Science and Engineering (83.6%)</h5>
+                                    <p class="timeline__timeframe">Aug 2020 - May 2024</p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Shree Shankara Senior Secondary School</h4>
+                                    <h5 class="timeline__meta">Class XII (71.6%)</h5>
+                                    <p class="timeline__timeframe">April 2018 - May 2019</p>
+                                </div>
+                            </div>
+
+                            <h2 class="text-pretitle" style="margin-top: 4rem;" data-animate-el>
+                                Achievements & Publications
+                            </h2>
+                            <div class="timeline__block" style="margin-top: 1.5rem;">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h5 class="timeline__meta">IEEE Publications & Milestones</h5>
+                                    <p class="timeline__timeframe">2024 - 2026</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p><strong>Published:</strong> "Beyond the Fairness-Accuracy Tradeoff: Genetic Algorithm-Driven Sample Weighting for Age-Based Fairness" (ICITIIT, March 2026).</p>
+                                    <p><strong>Accepted:</strong> "Multi-attribute AI Fairness via Genetic Algorithm" (AISIGH-SD, Dec 2026).</p>
+                                    <p><strong>Achievements:</strong> GATE 2026 and GATE 2025 Qualified | Student of the Year 2024, CIET.</p>
+                                </div>
+                            </div>
+
+                        </div> <!-- end timeline -->
+                        
+                    </div> <!-- end column -->
+
+
+                </div> <!-- end about-timelines -->
+
+            </section> <!-- end s-about -->
+
+
+            <!-- ### works
+            ================================================== -->
+            <section id="works" class="s-works target-section">
+
+                <div class="row works-portfolio">
+
+                    <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Recent Works
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            A selection of my recent projects bridging full-stack engineering and applied artificial intelligence.
+                        </p>
+    
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+
+                            <!-- Project 1 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" target="_blank" href="https://github.com/amankrsah/web-geo-attendance">
+                                    <div class="folio-list__item-pic">
+                                        <div class="project-letter-placeholder">S</div>
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            React, FastAPI, DeepFace
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            SecureHostel: Geofenced & Biometric Attendance
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/amankrsah/web-geo-attendance" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <!-- Project 2 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" target="_blank" href="https://github.com/amankrsah/Intersectional-Fairness-via-Genetic-Algorithm-Threshold-Optimization">
+                                    <div class="folio-list__item-pic">
+                                        <div class="project-letter-placeholder">I</div>
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Python, DEAP
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Intersectional Fairness via Genetic Algorithms
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/amankrsah/Intersectional-Fairness-via-Genetic-Algorithm-Threshold-Optimization" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <!-- Project 3 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" target="_blank" href="https://kearth-deploy.onrender.com">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/projects/kesar.png" 
+                                             srcset="images/projects/kesar.png 1x, images/projects/kesar.png 2x" alt="Kearth Solutions">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            MERN Stack Website
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Kearth Solutions & Admin Panel
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://kearth-deploy.onrender.com" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <!-- Project 4 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" target="_blank" href="https://amankrsah.github.io/devloktransport/">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/projects/devlok_logo.jpeg" 
+                                             srcset="images/projects/devlok_logo.jpeg 1x, images/projects/devlok_logo.jpeg 2x" alt="Devlok Transport">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Official Website
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Devlok Transport Company
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://amankrsah.github.io/devloktransport/" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <!-- Project 5 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" target="_blank" href="https://amankrsah.github.io/tasktracer/">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/projects/todo.png" 
+                                             srcset="images/projects/todo.png 1x, images/projects/todo.png 2x" alt="Task-Tracer">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Task-Tracer
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            To-do App with modern Scoring Systems
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://amankrsah.github.io/tasktracer/" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <!-- Project 6 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" target="_blank" href="https://amankrsah.github.io/QR-Code-Generator/">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/projects/QR.png"
+                                             srcset="images/projects/QR.png 1x, images/projects/QR.png 2x" alt="QR-Code generator">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            QR-Code generator
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Generate QR Codes for Links and Texts.
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://amankrsah.github.io/QR-Code-Generator/" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                            <!-- Project 7 -->
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="https://amankrsah.github.io/tictactoe/">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/projects/tic.png" 
+                                             srcset="images/projects/tic.png 1x, images/projects/tic.png 2x" alt="Classic Tic-Tac-Toe">
+                                    </div>
+                                    
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Classic Tic-Tac-Toe
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            With Sound Effects
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://amankrsah.github.io/tictactoe/" title="project link">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </li>
+
+                        </ul> <!-- end folio-list -->
+
+            </section> <!-- end s-works -->
+
+
+            <!-- ### contact
+            ================================================== -->
+            <section id="contact" class="s-contact target-section">
+
+                <div class="row contact-top">
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle">
+                            Get In Touch
+                        </h2>
+
+                        <p class="h1">
+                            I love to hear from you.
+                            Whether you have a Project, question or just 
+                            want to chat about design, tech & art — shoot me a message.
+                        </p>
+                    </div>
+                </div> <!-- end contact-top -->
+
+                <div class="row contact-bottom">
+                    <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Reach me at</h3>
+                        <p class="contact-links">
+                            <a href="mailto:amankumarsah97555@gmail.com" class="mailtoui">amankumarsah97555<br>@gmail.com</a> <br>
+                            <a href="tel:+919755510402">+91 97555-10402</a>
+                        </p>
+                    </div>
+                    <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+                        <h3 class="text-pretitle">Social</h3>
+                        <ul class="contact-social">
+                            <li><a href="https://www.linkedin.com/in/amankrsah108/">LinkedIn</a></li>
+                            <li><a href="https://github.com/amankrsah">Github</a></li>
+                            <li><a href="https://www.instagram.com/sah_aman_/">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="column lg-4 md-12 contact-block">
+                        <a href="mailto:amankumarsah97555@gmail.com" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello.</a>
+                    </div>
+                </div> <!-- end contact-bottom -->
+
+            </section> <!-- end contact -->
+
+        </main> <!-- end s-content -->
+
+
+        <!-- ## footer
+        ================================================== -->
+        <footer class="s-footer">
+
+            <div class="row">
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end -s-pagewrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
